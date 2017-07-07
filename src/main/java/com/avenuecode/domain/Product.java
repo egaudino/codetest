@@ -14,6 +14,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String description;
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<Image> images;
 
@@ -21,10 +22,11 @@ public class Product {
         super();
     }
 
-    public Product(Integer id, String name, List<Image> images) {
+    public Product(Integer id, String name, String description, List<Image> images) {
         super();
         this.id = id;
         this.name = name;
+        this.description = description;
         this.images = images;
     }
 
@@ -44,6 +46,13 @@ public class Product {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public List<Image> getImages() {
         return images;
