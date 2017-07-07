@@ -1,8 +1,8 @@
-# codetest
-Java codetest project
+# codetest app
+RESTful CRUD application for products
 
 # Running application
-$mvn sping-boot:run
+$mvn spring-boot:run
 
 # Frameworks
 Spring, JPA/Hibernate, H2Database
